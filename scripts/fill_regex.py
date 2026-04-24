@@ -185,7 +185,7 @@ def normalize_names(data: dict, client: anthropic.Anthropic) -> tuple[dict, int]
 
     print(f"  Calling Claude API to review {len(candidates)} entries for naming quality...")
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=4096,
         system=system,
         messages=[{"role": "user", "content": user}],
